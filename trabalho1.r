@@ -2,6 +2,19 @@
 
 ## trabalho funções R
 ## 1) ## exercicio problematico ainda
+exer1 <- function(favoraveis,total,confianca){
+  Z <- qnorm(0.5 + (confianca/2))
+  ## probabilidade de favoravel
+  p <- favoraveis/total
+  denominador = p*(1-p)
+  
+  erro  <-  Z *(sqrt(denominador/total))
+  maior <- p + erro
+  menor <- p - erro
+  return (c(menor,maior)) 
+}
+exer1(180,380,0.90)
+
 
 ## 2)
 ## essa funcao resolve o excercio basta escolher os valor p e q
@@ -52,5 +65,6 @@ exer3 <- function(qtdDados,media,variancia,confianca){
   return (c(menor,maior))
 }
 exer3(100,media = 100,variancia = 100,confianca = 0.95)
+
 
 
