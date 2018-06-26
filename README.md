@@ -11,3 +11,6 @@ https://www.youtube.com/channel/UCaNIxVagLhqupvUiDK01Mgg
 
 intervalo de confiança:
 https://www.youtube.com/watch?v=eBh1pdrTIYo
+
+intervalo para probabilidade:
+http://leg.ufpr.br/~silvia/CE701/node48.html

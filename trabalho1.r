@@ -39,6 +39,7 @@ func(0.5,0.5)
 ## pode ser meio q usado com a tabela Z
 
 ## t.test
+## fazer um desenho que representa o Z ali
 ## exercicio 3
 exer3 <- function(qtdDados,media,variancia,confianca){
   # gerando os dados da normal
@@ -51,3 +52,5 @@ exer3 <- function(qtdDados,media,variancia,confianca){
   return (c(menor,maior))
 }
 exer3(100,media = 100,variancia = 100,confianca = 0.95)
+
+
