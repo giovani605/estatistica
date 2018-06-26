@@ -8,3 +8,6 @@ https://www.youtube.com/watch?v=uNe81VZvqJg&list=PLf1lowbdbFIDbvBg91YxL2haH5Y_lD
 
 esse canal ajuda muito com R
 https://www.youtube.com/channel/UCaNIxVagLhqupvUiDK01Mgg
+
+intervalo de confiança:
+https://www.youtube.com/watch?v=eBh1pdrTIYo
