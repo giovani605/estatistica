@@ -18,7 +18,7 @@ exer1(180,380,0.90)
 
 ## 2)
 ## essa funcao resolve o excercio basta escolher os valor p e q
-exer2a  <- function(p,q)
+exer2  <- function(p,q)
 {
   Z = 1.65
   E = 0.02
@@ -28,10 +28,10 @@ exer2a  <- function(p,q)
 }
 ## letra a
 ## utilize os valores p = 0.5 e q 0.5
-func(0.5,0.5)
+exer2(0.5,0.5)
 ## letra b 
 ## utilize os valores p = 0.2 e q 0.8
-func(0.2,0.8)
+exer2(0.2,0.8)
 
 func(0.5,0.5)
 ## P(x <= 70)
@@ -66,5 +66,43 @@ exer3 <- function(qtdDados,media,variancia,confianca){
 }
 exer3(100,media = 100,variancia = 100,confianca = 0.95)
 
+## exercicio 4
+exer4 <- function(erro,desvio,confianca){
+  Z <- qnorm(0.5 + (confianca/2))
+  n <- ((Z*desvio)/erro)^2
+  return(n)
+  
+}
+exer4(50,400,0.95)
+
+## exercicio 5
+exer5 <- function(vetor1,vetor2,n,significancia){
+  ## vetor1 < vetor2
+  vetordif = vetor1 - vetor2;
+  vetordifQuadrada = (vetor1 - vetor2)^2
+  sumDif <- sum(vetordif)
+  sumDifQuadrada <- sum(vetordifQuadrada)
+  mediaDiff <- sumDif / n
+  Sd <- sqrt( ( sumDifQuadrada - ((sumDif^2)/n) ) / ( n-1) )
+  uD = 0;
+  Tobs = (mediaDiff - uD) / (Sd/sqrt(n) )
+  t.test(x =vetor1,y =vetor2,conf.level = significancia,alternative = "less" )
+}
+exer5(vetorY,vetorX,5,0.1)
+
+## exer 6
+vetorAntes <- c(635,704,662,560,603,745,698,575,633,669)
+vetorDepois <- c(640,712,681,558,610,740,707,585,635,682)
+exer6 <- function(vetor1,vetor2,n,significancia){
+  ## vetor1 < vetor2
+  t.test(x =vetor1,y =vetor2,conf.level = significancia)
+}
+exer6(vetorAntes,vetorDepois,10,0.01)
 
 
+
+## exercicio 7
+X <- c(2,2,2,4,4,4,6,6,6,8,8,8,10,10,10)
+Y <- c(2.1,1.8,1.9,4.5,4.2,4,6.2,6,6.5,8.2,7.8,7.7,9.6,10,10.1)
+mod <- lm(Y ~ X)
+coef(mod)
